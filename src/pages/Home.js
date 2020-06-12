@@ -10,7 +10,6 @@ export default () => {
     axios.get('https://blajar-app.firebaseio.com/chapters.json')
       .then(res => {
         setChapters(Object.entries(res.data))
-        console.log(res.data)
       })
   }, [])
 
