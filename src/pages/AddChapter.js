@@ -23,7 +23,9 @@ export default withRouter((props) => {
 
   const QuestionChangeHandler = (e) => {
     const newObject = {...form}
-    newObject.contents[e.target.dataset.idx][e.target.dataset.name][e.target.dataset.aid] = e.target.value
+    newObject.contents[e.target.dataset.idx][e.target.dataset.name][e.target.dataset.anum] = {id: '', label: ''}
+    newObject.contents[e.target.dataset.idx][e.target.dataset.name][e.target.dataset.anum].id = e.target.dataset.aid
+    newObject.contents[e.target.dataset.idx][e.target.dataset.name][e.target.dataset.anum].label = e.target.value
     setForm(newObject)
   }
 
@@ -103,7 +105,8 @@ export default withRouter((props) => {
                       value={form.contents[index].content}
                       id={`anwers[0]${index}}`}
                       data-name="answers"
-                      data-aid="0"
+                      data-anum="0"
+                      data-aid="A"
                       data-idx={index}
                       onChange={QuestionChangeHandler}
                     />
@@ -114,7 +117,8 @@ export default withRouter((props) => {
                       value={form.contents[index].content}
                       id={`anwers[1]${index}}`}
                       data-name="answers" 
-                      data-aid="1"
+                      data-anum="1"
+                      data-aid="B"
                       data-idx={index}
                       onChange={QuestionChangeHandler}
                     />
@@ -125,7 +129,8 @@ export default withRouter((props) => {
                       value={form.contents[index].content}
                       id={`anwers[2]${index}}`}
                       data-name="answers" 
-                      data-aid="2"
+                      data-anum="2"
+                      data-aid="C"
                       data-idx={index}
                       onChange={QuestionChangeHandler}
                     />
