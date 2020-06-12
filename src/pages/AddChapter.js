@@ -35,13 +35,11 @@ export default withRouter((props) => {
 
   const addMaterial = () => {
     const newObject = [...form.contents, blankMaterial]
-    console.log(newObject)
     setForm({...form, contents: newObject})
   }
 
   const addQuestion = () => {
     const newObject = [...form.contents, blankQuestion]
-    console.log(newObject)
     setForm({...form, contents: newObject})
   }
 
