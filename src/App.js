@@ -3,6 +3,7 @@ import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Header from './components/Header'
 import Home from './pages/Home'
 import AddChapter from './pages/AddChapter'
+import Monitor from './pages/Monitor'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/add">
           <AddChapter />
         </Route>
+        <Route path="/monitor/:id" component={Monitor}/>
         <Route path="/">
           <Home />
         </Route>

@@ -46,6 +46,11 @@ a.add {
   text-decoration: none;
 }
 
+a.monitor {
+  color: black;
+  text-decoration: none;
+}
+
 .chapters {
   margin: 50px 0;
   font-weight: 600;
@@ -88,6 +93,23 @@ a.add {
 
 .chapter p {
   margin-left: 100px;
+}
+
+/* Monitor */
+
+.monitor {
+  margin:  30px 0;
+}
+
+.user {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.detail {
+  font-size: 0.8em;
+  color: #626262;
+  margin: 0;
 }
 
 /* Add Chapter */

@@ -21,10 +21,12 @@ export default () => {
         <Link to="/add" className="add">Tambahkan materi</Link>
         <div className="chapters">
           {chapters.map((item, index) =>
-            <div className="chapter" key={item[0]}>
+          <Link to={`/monitor/${item[0]}`} key={item[0]} className="monitor">
+            <div className="chapter">
               <span>{index+1}</span>
               <p>{item[1].title}</p>
-            </div> 
+            </div>
+          </Link>
           )}
         </div>
       </div>
