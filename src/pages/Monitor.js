@@ -43,7 +43,7 @@ export default (props) => {
         <div className="monitors">
           {answers.map((item, index) =>
             <div className="monitor" key={index}>
-              <p className="user">{index+1}. {!!users ? users[item.user_id].name : null} </p>
+              <p className="user">{index+1}. {Object.keys(users).length === 0 ? null : users[item.user_id].name} </p>
               <p className="detail">{totalCorrectAnswers(item.data).length} jawaban benar dari total {totalQuestions(item.data).length} pertanyaan</p>
             </div> 
           )}
